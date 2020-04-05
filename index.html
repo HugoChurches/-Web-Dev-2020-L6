@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+    <meta charset="UTF-8" />
     <head>
         <title>
             Youtube Quick Search
         </title>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="A Youtube API TEST!" />
-        <link rel="styles" href="css/styles.css">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
         <header>
-            <h1 class="w100 text-center">
+            <h1>
                 <a href="index.html">Youtube Video Search Weblet</a>
             </h1>
         </header>
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <form action="#">
-                    <p><input type="text" id="search" placeholder="Type something..." autocomplete="off" class="form-control" /></p>
-                    <p><input type="submit" value="Search"></p>
+                    <p><input type="text" id="search" placeholder="Quick search..." /></p>
+                    <p class="NextBack"><input type="submit" value="Search"></p>
                 </form>
-
                 <!-- Populate the page with videos -->
                 <div id="results"></div>
+            </div>
+            <div id="buttonAdd">
             </div>
         </div>
         <!-- Load Jquery CDN-->
