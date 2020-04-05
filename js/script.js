@@ -7,14 +7,12 @@ $(document).ready(function(){
     var PaginationToken = ""
     var myAnswer = ""
     //Target the form for the get request
-
     $("form").submit(function(event){
         event.preventDefault()
         var search = $("#search").val()
         //API key, search term, amount of videos to display
         videoSearch(API_KEY, search, Limiter)
     })
-
     function videoSearch(key, search, maxResults){
         $.get("https://www.googleapis.com/youtube/v3/search?key=" + key + "&type=video&part=snippet&maxResults=" + maxResults + "&q=" + search, function(data){
             myAnswer = data
@@ -58,8 +56,6 @@ $(document).ready(function(){
         $("#results").html(video)
         Limiter = 9
     }
-
-
     function nextPage(key, search, maxResults, nextPageToken){
         $.get("https://www.googleapis.com/youtube/v3/search?key=" + key + "&type=video&part=snippet&maxResults=" + maxResults + "&pageToken=" + nextPageToken +"&q=" + search, function(data){
         console.log("I got called!")
@@ -89,6 +85,5 @@ $(document).ready(function(){
             })
     })
         $("#results").html(video)
-
     }
 });
